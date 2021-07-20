@@ -8,7 +8,7 @@ public class AdvancedAddressBook {
 		String url = "jdbc:mysql://localhost:3306/AddressBookService";
 		String userName = "root";
 		String password = "root";
-		Class.forName("com.mysql.cj.jdbc.Driver");
+		
 
 		// System.out.println("Welcome to Address Book System!");
 		// establish connection
@@ -16,11 +16,11 @@ public class AdvancedAddressBook {
 				Statement st = con.createStatement();) {
 			// ResultSet rs = st.executeQuery("select * student");
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			String sql = "create table AddressBook(firstName varchar(255),lastName varchar(255),address varchar(255),city varchar(255),state varchar(255),zipCode int,PhoneNumber varchar(10) primary key,email varchar(255))";
-
+			String sql = "INSERT INTO AddressBook VALUES ('pooja','roy','mumbai','mumbai','MH',323,'9898989800','p@gmail.com')";
+			
 			// execute the query
 			st.executeUpdate(sql);
-			System.out.println("table created successfully....");
+			System.out.println("records inserted successfully....");
 
 		} catch (Exception e) {
 			e.printStackTrace();
