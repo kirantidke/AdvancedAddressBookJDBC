@@ -12,6 +12,7 @@ public class AdvancedAddressBook {
 
 		// System.out.println("Welcome to Address Book System!");
 		// establish connection
+
 		try (Connection con = DriverManager.getConnection(url, userName, password);
 				Statement st = con.createStatement();) {
 			// ResultSet rs = st.executeQuery("select * student");
